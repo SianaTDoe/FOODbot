@@ -4,6 +4,7 @@ const prot = require('./prot');
 const glucide = require('./glucide');
 const legume = require('./legume');
 const commande = require('./commande');
+require("dotenv").config();
 
 //ONLINE CODE ♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢
 
@@ -11,7 +12,7 @@ client.on("ready", function () {
     console.log("Mon BOT est connecté");
 })
 
-client.login("process.env.BOT_TOKEN")
+client.login(process.env.BOT_TOKEN);
 
 
 
@@ -96,11 +97,11 @@ function Commande() {
 
 client.on("message", message => {
     if (message.content === "*help") {
-        message.channel.send(`**Liste des commandes :** & +
-    __prot__ 
-    __glucide__
-    __legume__
-    __commande__
+        message.channel.send(`**Liste des commandes :** * +
+    prot
+    glucide
+    legume
+    commande
      
      `)
     }
