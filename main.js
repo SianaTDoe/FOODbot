@@ -11,7 +11,7 @@ client.on("ready", function () {
     console.log("Mon BOT est connecté");
 })
 
-client.login("ODMyMjE4NDc2NTc1MzI2MjM4.YHgl2g.8Hn0EWsUYtV6SmzumAUgYZNFQkM")
+client.login("process.env.BOT_TOKEN")
 
 
 
